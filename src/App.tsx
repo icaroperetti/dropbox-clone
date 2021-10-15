@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import GlobalStyles from './styles/GlobalStyles'
+import Section from './components/Section'
+import data from './data'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Section
+        title={data[0].title}
+        description={data[0].description}
+        variant="blue"
+      />
+      <Section
+        title={data[1].title}
+        description={data[1].description}
+        variant="beige"
+      />
+      <Section
+        title={data[2].title}
+        description={data[2].description}
+        variant="blue"
+      />
+      <Section
+        title={data[3].title}
+        description={data[3].description}
+        variant="white"
+      />
+      <Section
+        variant="black"
+        title={data[4].title}
+        description={data[4].description}
+      />
+      <GlobalStyles />
+    </>
+  )
 }
 
-export default App;
+export default App
